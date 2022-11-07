@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AssetsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,4 +21,4 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('assets/{file}', \App\Http\Controllers\AssetsController::class)->name('assets');
+Route::get('assets/{file}', AssetsController::class)->name('assets');
